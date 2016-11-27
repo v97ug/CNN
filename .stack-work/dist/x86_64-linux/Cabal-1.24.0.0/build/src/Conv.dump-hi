@@ -1,0 +1,57 @@
+
+==================== FINAL INTERFACE ====================
+2016-11-12 12:32:41.046646 UTC
+
+interface conv1-0.1.0.0-EHCJf3j0Az1DOi1W0J5BXk:Conv 8001
+  interface hash: c103e69e9c36f97d97ffe5fdfeb2bd03
+  ABI hash: eabccdcba652ca7274c47536a7691002
+  export-list hash: 5827be262e122f663e2a018257a368bc
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: b159a15c55fa7c6870cb2eb79bbae5a5
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Conv.conv'
+module dependencies: Type
+package dependencies: base-4.9.0.0* ghc-prim-0.5.0.0
+                      integer-gmp-1.0.0.1
+orphans: base-4.9.0.0:GHC.Base base-4.9.0.0:GHC.Float
+family instance modules: base-4.9.0.0:Control.Applicative
+                         base-4.9.0.0:Data.Either base-4.9.0.0:Data.Functor.Const
+                         base-4.9.0.0:Data.Monoid base-4.9.0.0:Data.Type.Equality
+                         base-4.9.0.0:GHC.Generics base-4.9.0.0:GHC.IO.Exception
+                         base-4.9.0.0:GHC.TypeLits
+import  -/  base-4.9.0.0:Data.Foldable 8aeb682f6c74f97fcf0ace0d608a43ea
+import  -/  base-4.9.0.0:GHC.Base 8ed3be81c0707b322f975a84ae1bb816
+import  -/  base-4.9.0.0:GHC.List 13d2451194c1c6e53b4f4f07947736dd
+import  -/  base-4.9.0.0:GHC.Num 48f506a8f4ecf06285d0a0706594dcc0
+import  -/  base-4.9.0.0:Prelude b9bddb97799837fe67a8d00939a5b6c3
+import  -/  Type e3ce5ddf23dd46a407cb500cf324269c
+  exports: be0eb6aa10e9623115c8d1121fe21e5f
+  Matrix' 1bf974782f5c8168296fcf260a9c36b0
+import  -/  ghc-prim-0.5.0.0:GHC.Classes 0bdf3d057a415ec1b84a7b1994efbe47
+ab93f5ef7c1c18868def1243a477a1a8
+  $trModule :: GHC.Types.Module
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: (GHC.Types.Module Conv.$trModule2 Conv.$trModule1) -}
+4029a06c5dcff02b0f2f0accd6ae6468
+  $trModule1 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS "Conv"#) -}
+2b8f3b46019bca3d9d2ce519b8e0bc05
+  $trModule2 :: GHC.Types.TrName
+  {- HasNoCafRefs, Strictness: m1,
+     Unfolding: (GHC.Types.TrNameS
+                   "conv1-0.1.0.0-EHCJf3j0Az1DOi1W0J5BXk"#) -}
+490f64e234582f27c390876842c97609
+  conv' :: Type.Matrix' -> Type.Matrix' -> Type.Matrix'
+  {- Arity: 2, Strictness: <S,U><S,1*U> -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+

@@ -1,0 +1,155 @@
+Configuring hmatrix-0.17.0.2...
+Building hmatrix-0.17.0.2...
+Preprocessing library hmatrix-0.17.0.2...
+[ 1 of 28] Compiling Internal.Vector  ( src/Internal/Vector.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Vector.o )
+
+src/Internal/Vector.hs:205:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: RealFloat a
+    • In the type signature for:
+           asReal :: (RealFloat a, Storable a) =>
+                     Vector (Complex a) -> Vector a
+
+src/Internal/Vector.hs:210:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: RealFloat a
+    • In the type signature for:
+           asComplex :: (RealFloat a, Storable a) =>
+                        Vector a -> Vector (Complex a)
+[ 2 of 28] Compiling Internal.Devel   ( src/Internal/Devel.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Devel.o )
+[ 3 of 28] Compiling Internal.Vectorized ( src/Internal/Vectorized.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Vectorized.o )
+[ 4 of 28] Compiling Internal.Matrix  ( src/Internal/Matrix.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Matrix.o )
+[ 5 of 28] Compiling Internal.Foreign ( src/Internal/Foreign.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Foreign.o )
+[ 6 of 28] Compiling Internal.ST      ( src/Internal/ST.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/ST.o )
+
+src/Internal/ST.hs:56:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Storable t
+    • In the type signature for:
+           unsafeThawVector :: Storable t => Vector t -> ST s (STVector s t)
+
+src/Internal/ST.hs:80:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Storable t
+    • In the type signature for:
+           unsafeFreezeVector :: Storable t => STVector s t -> ST s (Vector t)
+
+src/Internal/ST.hs:125:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Storable t
+    • In the type signature for:
+           unsafeThawMatrix :: Storable t => Matrix t -> ST s (STMatrix s t)
+
+src/Internal/ST.hs:146:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Storable t
+    • In the type signature for:
+           unsafeFreezeMatrix :: Storable t => STMatrix s t -> ST s (Matrix t)
+[ 7 of 28] Compiling Internal.IO      ( src/Internal/IO.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/IO.o )
+[ 8 of 28] Compiling Internal.Element ( src/Internal/Element.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Element.o )
+
+src/Internal/Element.hs:563:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Num a
+    • In the type signature for:
+           mapMatrixWithIndexM_ :: (Element a, Num a, Monad m) =>
+                                   ((Int, Int) -> a -> m ()) -> Matrix a -> m ()
+[ 9 of 28] Compiling Internal.Conversion ( src/Internal/Conversion.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Conversion.o )
+[10 of 28] Compiling Internal.LAPACK  ( src/Internal/LAPACK.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/LAPACK.o )
+[11 of 28] Compiling Internal.Numeric ( src/Internal/Numeric.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Numeric.o )
+
+src/Internal/Numeric.hs:911:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Container Vector t
+    • In the instance declaration for
+        ‘Transposable (Matrix t) (Matrix t)’
+[12 of 28] Compiling Internal.Chain   ( src/Internal/Chain.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Chain.o )
+[13 of 28] Compiling Internal.Algorithms ( src/Internal/Algorithms.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Algorithms.o )
+
+src/Internal/Algorithms.hs:619:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Element t
+    • In the type signature for:
+           rankSVD :: Element t => Double -> Matrix t -> Vector Double -> Int
+[14 of 28] Compiling Internal.Random  ( src/Internal/Random.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Random.o )
+[15 of 28] Compiling Internal.Container ( src/Internal/Container.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Container.o )
+[16 of 28] Compiling Internal.Sparse  ( src/Internal/Sparse.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Sparse.o )
+[17 of 28] Compiling Internal.Convolution ( src/Internal/Convolution.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Convolution.o )
+
+src/Internal/Convolution.hs:49:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Num t
+    • In the type signature for:
+           conv :: (Container Vector t, Product t, Num t) =>
+                   Vector t -> Vector t -> Vector t
+[18 of 28] Compiling Numeric.Vector   ( src/Numeric/Vector.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Numeric/Vector.o )
+[19 of 28] Compiling Internal.CG      ( src/Internal/CG.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/CG.o )
+[20 of 28] Compiling Numeric.Matrix   ( src/Numeric/Matrix.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Numeric/Matrix.o )
+[21 of 28] Compiling Internal.Util    ( src/Internal/Util.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Util.o )
+[22 of 28] Compiling Internal.Modular ( src/Internal/Modular.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Modular.o )
+
+src/Internal/Modular.hs:62:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Enum t
+    • In the instance declaration for ‘Enum (Mod m t)’
+
+src/Internal/Modular.hs:67:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: KnownNat m
+    • In the instance declaration for ‘Eq (Mod m t)’
+
+src/Internal/Modular.hs:162:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: KnownNat m
+    • In the instance declaration for ‘CTrans (Mod m I)’
+
+src/Internal/Modular.hs:163:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: KnownNat m
+    • In the instance declaration for ‘CTrans (Mod m Z)’
+
+src/Internal/Modular.hs:247:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Indexable (Vector t) t
+    • In the instance declaration for
+        ‘Indexable (Vector (Mod m t)) (Mod m t)’
+
+src/Internal/Modular.hs:298:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Element (Mod n t)
+    • In the type signature for:
+           f2iM :: (Element t, Element (Mod n t)) =>
+                   Matrix (Mod n t) -> Matrix t
+
+src/Internal/Modular.hs:301:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: Element (Mod n t)
+    • In the type signature for:
+           i2fM :: (Element t, Element (Mod n t)) =>
+                   Matrix t -> Matrix (Mod n t)
+
+src/Internal/Modular.hs:336:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: KnownNat m
+    • In the instance declaration for ‘Testable (Matrix (Mod m I))’
+[23 of 28] Compiling Numeric.LinearAlgebra.Data ( src/Numeric/LinearAlgebra/Data.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Numeric/LinearAlgebra/Data.o )
+[24 of 28] Compiling Numeric.LinearAlgebra.Devel ( src/Numeric/LinearAlgebra/Devel.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Numeric/LinearAlgebra/Devel.o )
+[25 of 28] Compiling Numeric.LinearAlgebra ( src/Numeric/LinearAlgebra.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Numeric/LinearAlgebra.o )
+[26 of 28] Compiling Numeric.LinearAlgebra.HMatrix ( src/Numeric/LinearAlgebra/HMatrix.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Numeric/LinearAlgebra/HMatrix.o )
+[27 of 28] Compiling Internal.Static  ( src/Internal/Static.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Internal/Static.o )
+
+src/Internal/Static.hs:331:10: warning: [-Wredundant-constraints]
+    • Redundant constraint: Num (Matrix t)
+    • In the instance declaration for ‘Fractional (Dim n (Vector t))’
+[28 of 28] Compiling Numeric.LinearAlgebra.Static ( src/Numeric/LinearAlgebra/Static.hs, .stack-work/dist/x86_64-linux/Cabal-1.24.0.0/build/Numeric/LinearAlgebra/Static.o )
+
+src/Numeric/LinearAlgebra/Static.hs:79:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: 1 <= n
+    • In the type signature for:
+           (&) :: (KnownNat n, 1 <= n) => R n -> ℝ -> R (n + 1)
+
+src/Numeric/LinearAlgebra/Static.hs:252:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: n <= m
+    • In the type signature for:
+           svdTall :: (KnownNat m, KnownNat n, n <= m) =>
+                      L m n -> (L m n, R n, L n n)
+
+src/Numeric/LinearAlgebra/Static.hs:258:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: m <= n
+    • In the type signature for:
+           svdFlat :: (KnownNat m, KnownNat n, m <= n) =>
+                      L m n -> (L m m, R m, L n m)
+
+src/Numeric/LinearAlgebra/Static.hs:540:1: warning: [-Wredundant-constraints]
+    • Redundant constraint: 1 <= n
+    • In the type signature for:
+           mean :: (KnownNat n, 1 <= n) => R n -> ℝ
+
+src/Numeric/LinearAlgebra/Static.hs:615:10: warning: [-Wredundant-constraints]
+    • Redundant constraints: (KnownNat n', KnownNat m')
+    • In the instance declaration for ‘Testable (L n' m')’
+Installing library in
+/home/takeyuki/Documents/haskell/deep-learning/conv1/.stack-work/install/x86_64-linux/lts-7.8/8.0.1/lib/x86_64-linux-ghc-8.0.1/hmatrix-0.17.0.2-HoBfYSJ1dMG9PoVkmbcnW2
+Registering hmatrix-0.17.0.2...
